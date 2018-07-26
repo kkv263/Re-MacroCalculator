@@ -19,10 +19,42 @@ export default class Calculator extends Component {
           </View>
         </View>
         <View style={styles.infoContainer}>
-          <View style={styles.infoCategory}></View>
-          <View style={styles.infoCategory}></View>
-          <View style={styles.infoCategory}></View>
-          <View style={styles.infoCategory}></View>
+            <View style={styles.infoCategory}>
+            <View>
+              <Image style={{width:32, height:35, marginTop:10}} source={require('../assets/gendericon.png')}></Image>
+            </View>
+            <View>
+              <Text style={{color:'white'}}>Male</Text>
+              <Text style={{color:'white'}}>Gender</Text>
+            </View>
+          </View>
+          <View style={styles.infoCategory}>
+          <View>
+              <Image style={{width:32, height:35, marginTop:10}} source={require('../assets/calicon.png')}></Image>
+            </View>
+            <View>
+              <Text style={{color:'white'}}>21</Text>
+              <Text style={{color:'white'}}>Age</Text>
+            </View>
+          </View>
+          <View style={styles.infoCategory}>
+          <View>
+              <Image style={{width:32, height:45, marginTop:10}} source={require('../assets/heighticon.png')}></Image>
+            </View>
+            <View>
+              <Text style={{color:'white'}}>5 ft</Text>
+              <Text style={{color:'white'}}>Height</Text>
+            </View>
+          </View>
+          <View style={styles.infoCategory}>
+          <View>
+              <Image style={{width:35, height:35, marginTop:15}} source={require('../assets/weighticon.png')}></Image>
+            </View>
+            <View>
+              <Text style={{color:'white'}}>180lbs</Text>
+              <Text style={{color:'white'}}>Weight</Text>
+            </View>
+          </View>
         </View>
       </View>
     );
@@ -49,16 +81,17 @@ const styles = StyleSheet.create({
     },
     infoCategory: {
       flex:1,
+      flexDirection: 'row',
       flexGrow: 1,
       flexBasis: '50%',
       height: '50%',
+      justifyContent: 'space-around',
+      borderBottomWidth:1,
+      borderColor: 'white',
    },
     infoContainer: {
       flexDirection:'row',
       flexWrap: 'wrap',
       height: 130,
-      borderBottomWidth:1,
-      borderColor: 'white',
-      opacity:0.5
     }
   });
